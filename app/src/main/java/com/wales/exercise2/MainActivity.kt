@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.view.MotionEvent
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -44,9 +45,9 @@ class MainActivity : AppCompatActivity() {
             val pickIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             pickIntent.type = "image/*"
 
-            val chooserIntent = Intent.createChooser(getIntent,  getString(R.string.select_album))
+            val chooserIntent = Intent.createChooser(getIntent, getString(R.string.select_album))
             chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(pickIntent))
-            startActivityForResult( chooserIntent, _albumRequestCode)
+            startActivityForResult(chooserIntent, _albumRequestCode)
         }
 
         btn_next.setOnClickListener {
@@ -77,4 +78,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
