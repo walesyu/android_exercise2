@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">練習二</string>
+    <string name="select_picture">拍照</string>
+    <string name="select_album">選擇相片</string>
+    <string name="next_page">下一頁</string>
+    <string name="close">關閉</string>
+    <string name="you_have_revoke_the_permission">您已經撤銷這個權限</string>
+</resources>
